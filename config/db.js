@@ -16,7 +16,7 @@ async function dbConnect() {
             bufferCommands: false, 
         };
         console.log("🔄 Estableciendo nueva conexión a MongoDB...");
-        cached.promise = mongoose.connect(`${process.env.MONGODB_URI}/QuickCartDB`, opts).then((mongoose) => {
+        cached.promise = mongoose.connect(process.env.MONGODB_URI, opts).then((mongoose) => {
             console.log("✅ Conectado exitosamente a MongoDB");
             return mongoose;
         })
