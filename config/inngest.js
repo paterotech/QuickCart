@@ -1,4 +1,7 @@
 import { Inngest } from "inngest";
+import connectDB from "@/lib/mongodb";
+import User from "@/models/userModel";
+
 
 // Create a client to send and receive events
 export const inngest = new Inngest({ id: "quickcart-next" });
